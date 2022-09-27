@@ -1,0 +1,19 @@
+1 Es el nodo A
+2 Solo 1 A,CI
+3 No, solo de H hast A
+4 Son: J, I, C y A
+5 Son: E, D, C, B y A
+6 No tiene descendientes
+7 Son: H, L, M, P y Q
+8 Tiene altura 2
+9 El arbol es de altura 5
+10 La profundidad es 1
+11 Su hermano es E
+12 Los nodos no pertenecen al mismo padre
+13 No
+14 No
+15 No tiene nodos a sus costados
+16 son: B, C, D, E
+17 Preorden:a, b, f, g, h, c, i, j, k, l, m, d, e, n, p y q 
+Postorden: h, l, m, k, g, f, i, j, p, q, n, b, c, d, e y r
+InOrden: h, g, f, b, a, c, i, j, k, l, m, d, e, n, p y q 

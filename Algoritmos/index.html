@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootcamp ATICMA 2022</title>
+        <link rel="stylesheet" href="CSS\style.css">
+        
+    </head>
+    <body>
+                
+        <h1>Bienvenido</h1>
+        <h2>Ejercicio 1</h2>
+        <p>Ingrese un numero: </p>
+        <form name="form1" action="" method="get">
+            <input type="number" name="numP"> 
+        <br>
+        <button onclick="primeNum()">Prueba</button>   
+        </form>
+        <div><p id="numFinal"></p></div>
+
+        <h2>Ejercicio 2</h2>
+        <p>Ingrese contrasena: </p>
+        <form name="form2" action="" method="post">
+            <input type="password" name="pass" required="">
+        <br>   
+        <button onclick="validatePass()">Prueba</button>  
+        </form>
+        <br>
+        <div><p id="passFinal"></p></div>
+
+        <h2>Ejercicio 3</h2>
+        <form name="form3" action="" method="get">  
+                    <label for="hourEmp">Ingrese el valor de la hora de un empleado: </label>
+                    <br>
+                    <input type="number" id="hourEmp" name="hourEmp">
+                    <br>
+                    <label for="name">Ingrese su nombre:</label>
+                    <br>
+                    <input type="text" id="name" name="name">
+                    <br>       
+                    <label for="antiquity">Antiguedad:</label>
+                    <br>
+                    <input type="number" name="antiquity">
+                    <br>
+                    <label for="hourWork">Horas trabajadas al mes:</label> 
+                    <br>   
+                    <input type="number" name="hourWork"> 
+                    <br> 
+                    <br>
+                    <button onclick="salary()">Prueba</button>    
+            </form>
+            <br>
+            <div class="wrapper">
+                <table>
+                    <tbody><tr>
+                        <th>
+                            <h1>RECIBO DE SUELDO</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><p id="nameFinal"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Antiguedad:</td>
+                        <td><p id="antiqFinal"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Sueldo final:</td>
+                        <td><p id="salaryFinal"></p></td>
+                    </tr>
+                </tbody></table>
+            </div>
+
+            <h2>Ejercicio 4</h2>
+            <p>Ingrese un numero: </p>
+            <form name="form4" action="" method="get">
+                <input type="number" name="randNun"> 
+            <br>
+            <button onclick="randomNum()">Prueba</button>   
+            </form>
+            <br>
+            <div><p id="randFinal"></p></div>
+            <br>
+
+            <h2>Ejercicio 5</h2>
+            <p>Ingrese un numero: </p>
+            <form name="form5" action="" method="get">
+            <input type="number" name="auxNun"> 
+            <br>
+            <button onclick="searchNum()">Prueba</button>   
+            </form>
+            <br>
+            <div><p id="auxFinal"></p></div>
+            <br>
+
+
+
+       <script>
+    
+            //EJERCICIO 1  
+            
+            function primeNum() {
+                let num=document.getElementsByName("numP").value;
+
+                for(let i = 2, root=Math.sqrt(num); i <= root; i++){
+                    if(num % i === 0) {
+                        document.getElementById("numFinal").innerHTML ='No es numero primo';
+                        return false;
+                    }
+                    else{
+                        document.getElementById("numFinal").innerHTML ='Es numero primo';
+                        return  num;
+                    }
+                }       
+                return  num;   
+            } 
+            //EJERCICIO 2  
+            let i=0;
+            function validatePass() {
+                let pass=document.getElementsByName("pass").value;
+                let aux=1234;
+                i++;
+               
+                    if(pass!=aux && i<3){
+                        document.getElementById("passFinal").innerHTML ='Contrasena erronea, vuelva a intentarlo';
+                    }
+                    else if (pass==aux){
+                         document.getElementById("passFinal").innerHTML ='Felicitaciones, recorda tu contrasena';
+                            }
+                         else{
+                            document.getElementById("passFinal").innerHTML ='Tenes que ejercitar la memoria';
+                         }   
+                return pass;
+            }
+           
+            //EJERCICIO 3
+            function salary(){
+                let priceHour=document.getElementsByName("hourEmp").value;
+                let name=document.getElementsByName("name").value;
+                let antiquity=document.getElementsByName("antiquity").value;
+                let hoursWork=document.getElementsByName("hourWork").value;
+                let hourAnti=30;
+
+                let result = priceHour * hoursWork;
+
+                if(antiquity>=10){
+                    result = result + (antiquity * hourAnti) ;
+                }
+                document.getElementById("nameFinal").innerHTML =name;
+                document.getElementById("antiqFinal").innerHTML =antiquity;
+                document.getElementById("salaryFinal").innerHTML =result;
+
+                return result;
+            }
+            //EJERCICIO 4
+            function randomNum(){
+                let num=document.getElementsByName("randNum").value;
+                let rand=1982;
+                if(num==rand){
+                    windws.alert('El numero es correcto');
+                }
+                else if(num<rand){
+                    window.alert('El numero es menor');
+                }
+                    else{
+                        window.alert('El numero es mayor');
+                    }
+            }
+            //EJERCICIO 5
+            function searchNum(){
+                const numbers=[];
+                let aux=document.getElementsByName("auxNum").value;
+
+                if(num!=-1){
+                    for (let i in numbers) {
+                    aux+=numbers[i];
+                    }
+                        let x=numbers[i];
+                        if(x<numbers[i]){
+                            x=numbers[i];
+                        }
+                        let y=numbers[i];
+                        if(y>numbers[i]){
+                            y=numbers[i];
+                        }
+                }
+                return aux;
+            }
+        
+        
+        </script> 
+    </body>
+</html>

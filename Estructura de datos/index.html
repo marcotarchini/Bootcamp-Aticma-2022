@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootcamp ATICMA 2022</title>
+        <link rel="stylesheet" href="CSS\style.css">
+        
+    </head>
+    <body>
+        <h1>Bienvenido</h1>
+        <h2>Ejercicio 1</h2>
+        <p>Arreglo = [1,2,5,8,4,5,6,9,11,88,55,33,22,4,54,87,21,54,65,34]</p>
+        <p>Ingrese un numero: </p>
+        <form name="form1" action="" method="get">
+        <input type="number" name="num"> 
+        <br>
+        <br>
+        <button onclick="searchNum()">Prueba</button>   
+        </form>
+        <br>
+        <p id="numFinal"></p>  
+        <br>
+        <h2>Ejercicio 2</h2>
+        <br>
+        <p id="sumFinal"></p> 
+    
+    </body>
+
+    <script>
+        //EJERCICIO 1
+        const L = [1,2,5,8,4,5,6,9,11,88,55,33,22,4,54,87,21,54,65,34];
+        let n=document.getElementsByName("num").value;
+
+        function searchNum(){
+            search(L,n);
+             document.getElementById("numFinal").innerHTML = L.join(" / ");
+        }
+
+        function search(L,n){
+            let numAux = L.findIndex(n);
+            if(numAux== n){
+               numAux=L.pop(n); 
+            }         
+            return numAux; 
+        }
+        //EJERCICIO2
+        
+
+        //EJERCICIO 3
+        let x=L.length-1;
+            function recursiveSum(L, x){
+                if(x==0)
+                    return L[0];
+                else
+                    return L[x] + recursiveSum(L,x-1);
+            }
+            //document.getElementById("sumFinal").innerHTML = 
+    </script>
+
+</html>
